@@ -1,0 +1,27 @@
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+    background-color: var(--clr-slate800);
+    font-size: var(--size-base);
+    padding: 0.75rem;
+    border-radius: 6px;
+    transition: background-color 0.6s ease-in-out;
+    cursor: pointer;
+}
+
+.task-buttons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--clr-fuchsia);
+    font-size: var(--size-lg);
+}
+
+.task-item:hover {
+    background-color: var(--clr-slate600);
+}
+
+.completed {
+    border-left: 6px solid var(--clr-fuchsia);
+}

@@ -1,0 +1,10 @@
+.header-title {
+    color: var(--clr-light);
+    text-align: center;
+}
+
+.header-date {
+    color: var(--clr-slate400);
+    text-align: center;
+    margin-bottom: 1.2rem;
+}

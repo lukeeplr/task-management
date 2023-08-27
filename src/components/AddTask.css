@@ -1,0 +1,24 @@
+.add-task-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.input-task {
+    border: 0;
+    flex: 1;
+    border-radius: 6px;
+    font-size: var(--size-lg);
+    font-family: inherit;
+    color: var(--clr-light);
+    height: 2em;
+    padding-left: 0.5rem;
+    background-color: var(--clr-slate600);
+}
+
+.input-task:focus {
+    outline-color: var(--clr-fuchsia);
+    outline-style: solid;
+}

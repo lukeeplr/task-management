@@ -11,7 +11,7 @@
 }
 
 .task-name {
-    max-width: 22ch;
+    max-width: 20ch;
     word-wrap: break-word;
 }
 
@@ -30,3 +30,22 @@
 .completed {
     border-left: 6px solid var(--clr-fuchsia);
 }
+
+@media (min-width: 375px) {
+    .task-name {
+        max-width: 24ch;
+    }
+  }
+
+  @media (min-width: 425px) {
+    .task-name {
+        max-width: 28ch;
+    }
+  }
+
+@media (min-width: 475px) {
+    .task-name {
+        max-width: 34ch;
+    }
+  }
+

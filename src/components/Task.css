@@ -10,6 +10,10 @@
     cursor: pointer;
 }
 
+.task-name {
+    max-width: 22ch;
+}
+
 .task-buttons {
     display: flex;
     align-items: center;

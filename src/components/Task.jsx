@@ -11,7 +11,7 @@ const Task = ( { task }) => {
         <>
             <div className={`task-item ${task.completed ? "completed" : ""}`}
             onClick={() => handleTaskClick(task.id)}
-            >{task.title}
+            ><p className='task-name'>{task.title}</p>
             <div className="task-buttons">
                 <AiOutlineEdit onClick={(e) => handleTaskEdition(e, task.id)}/> 
                 <AiOutlineClose onClick={(e) => handleTaskDeletion(e, task.id)}/>

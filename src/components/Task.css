@@ -12,6 +12,7 @@
 
 .task-name {
     max-width: 22ch;
+    word-wrap: break-word;
 }
 
 .task-buttons {

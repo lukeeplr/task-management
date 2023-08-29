@@ -22,3 +22,7 @@
     outline-color: var(--clr-fuchsia);
     outline-style: solid;
 }
+
+.input-empty {
+    border: 1px solid red 
+}

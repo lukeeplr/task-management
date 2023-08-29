@@ -7,6 +7,8 @@ import './AddTask.css'
 
 const AddTask = () => {
 
+    const inputRef = useRef()
+
     const {
         handleTaskAddition,
         inputState, 
@@ -20,8 +22,9 @@ const AddTask = () => {
 
     const handleClick = (isEditing) => {
         
+        inputRef.current.className = 'input-task' 
         if (!inputState) {
-            console.log(`aaaaaaa ${inputRef.current}`)
+            inputRef.current.className = 'input-task input-empty'
 
         } else if (inputState && isEditing) {
             handleEditingProcess(editId)
@@ -38,7 +41,7 @@ const AddTask = () => {
     return ( 
         <>
         <div className="add-task-container">
-            <input class="input-task" type="text" value={inputState} onChange={(e) => setInputState(e.target.value)} />
+            <input class="input-task" type="text" value={inputState} ref={inputRef} onChange={(e) => setInputState(e.target.value)} />
             <Button onClick={() => handleClick(isEditing)}>
                 {isEditing ? 'edit' : 'add'}
             </Button>

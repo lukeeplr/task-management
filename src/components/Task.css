@@ -31,6 +31,12 @@
     border-left: 6px solid var(--clr-fuchsia);
 }
 
+.no-tasks {
+    text-align: center;
+    color: var(--clr-white);
+    font-size: var(--size-lg);
+}
+
 @media (min-width: 375px) {
     .task-name {
         max-width: 24ch;

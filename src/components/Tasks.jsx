@@ -8,7 +8,7 @@ const Tasks = () => {
 
     if (tasks.length === 0) {
         return (
-            <p className='no-tasks'>Nada pra fazer agora...</p>
+            <p className='no-tasks'>nada pra fazer por agora...</p>
         )
     }
     

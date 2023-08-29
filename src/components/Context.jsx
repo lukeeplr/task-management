@@ -20,6 +20,7 @@ export const AppProvider = ({ children }) => {
       const [inputState, setInputState] = useState('')
       const [isEditing, setIsEditing] = useState(false)
       const [editId, setEditId] = useState(null)
+      const [alert, setAlert] = useState({active: false, msg: ''})
 
 
       const handleTaskAddition = (task) => {
@@ -39,7 +40,6 @@ export const AppProvider = ({ children }) => {
             return task
           })
         })
-    
       }
     
       const handleTaskDeletion = (e, taskId) => {
@@ -47,6 +47,7 @@ export const AppProvider = ({ children }) => {
         setTasks( (tasks) => {
           return tasks.filter( task => task.id !== taskId)
         })
+        setAlert({active: true, msg: 'tarefa deletada'})
     
       }
 
@@ -86,7 +87,9 @@ export const AppProvider = ({ children }) => {
             handleTaskClick,
             handleTaskDeletion,
             handleTaskEdition,
-            handleEditingProcess
+            handleEditingProcess,
+            alert,
+            setAlert
         }}>
             {children}
         </AppContext.Provider>

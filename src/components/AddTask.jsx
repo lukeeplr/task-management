@@ -17,25 +17,32 @@ const AddTask = () => {
         handleEditingProcess,
         setIsEditing, 
         editId, 
-        setEditId
+        setEditId,
+        setAlert,
     } = useGlobalContext()
 
     const handleClick = (isEditing) => {
+
+        let message = ''
         
         inputRef.current.className = 'input-task' 
         if (!inputState) {
+            message = 'informe uma tarefa'
             inputRef.current.className = 'input-task input-empty'
 
         } else if (inputState && isEditing) {
+            message = 'tarefa editada'
             handleEditingProcess(editId)
             setIsEditing(false)
             setEditId(null)
-            setInputState('')
 
         } else {
+            message = 'tarefa adicionada'
             handleTaskAddition(inputState)
-            setInputState('')
+            
         }
+        setAlert({active: true, msg: message})
+        setInputState('')
     }
 
     return ( 
@@ -43,7 +50,7 @@ const AddTask = () => {
         <div className="add-task-container">
             <input class="input-task" type="text" value={inputState} ref={inputRef} onChange={(e) => setInputState(e.target.value)} />
             <Button onClick={() => handleClick(isEditing)}>
-                {isEditing ? 'edit' : 'add'}
+                {isEditing ? 'editar' : 'adicionar'}
             </Button>
         </div>
         </>

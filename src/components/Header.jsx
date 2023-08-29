@@ -1,6 +1,10 @@
 import './Header.css'
+import Alert from './Alert';
+import { useGlobalContext } from './Context';
 
 const Header = () => {
+
+    const { alert } = useGlobalContext()
 
     const date = new Date();
     let currentDay= String(date.getDate()).padStart(2, '0');
@@ -10,8 +14,9 @@ const Header = () => {
 
     return (
         <>
-        <h1 className="header-title">Tarefas</h1>
-        <p className='header-date'>{`${currentDay}/${currentMonth}/${currentYear}`}</p>
+        {alert.active && <Alert/>}
+        <h1 className="header-title">TAREFAS</h1>
+        <p className='header-date'>{`${currentDay} / ${currentMonth} / ${currentYear}`}</p>
         </> 
      );
 }

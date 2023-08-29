@@ -1,0 +1,13 @@
+.alert {
+    display: flex;
+    background-color: #f0abfc;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.3rem;
+    border-radius: 8px;
+    height: 2rem;
+}
+
+.alert-message {
+    color: #701a75;
+}

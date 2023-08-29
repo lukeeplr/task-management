@@ -1,6 +1,7 @@
 .header-title {
     color: var(--clr-light);
     text-align: center;
+    letter-spacing: 0.2rem;
 }
 
 .header-date {

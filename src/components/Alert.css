@@ -6,8 +6,22 @@
     margin-bottom: 1.3rem;
     border-radius: 8px;
     height: 2rem;
+    animation: 0.2s ease-in-out 0s drop;
 }
 
 .alert-message {
     color: #701a75;
+}
+
+
+@keyframes drop {
+    from {
+        transform: translateY(-20px);
+        filter: blur(5px);
+    }
+
+    to {
+        transform: translateY(0px);
+        filter: blur(0px);
+    }
 }
